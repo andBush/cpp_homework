@@ -6,7 +6,7 @@
 
 using namespace std;
 
-double avg_temp(int* arr, int n) {
+double avg_temp(const int* arr, const int n) {
 	int sum_temps = 0;
 	for (int i = 0; i < n; i++) {
 		sum_temps += arr[i];
@@ -14,7 +14,7 @@ double avg_temp(int* arr, int n) {
 	return 1.0 * sum_temps / n;
 }
 
-PII min_max_temp(int* arr, int n) {
+PII min_max_temp(const int* arr, const int n) {
 	int min_temp = INT_MAX, max_temp = INT_MIN;
 	for (int i = 0; i < n; i++) {
 		min_temp = min(min_temp, arr[i]);
@@ -23,7 +23,7 @@ PII min_max_temp(int* arr, int n) {
 	return { min_temp, max_temp };
 }
 
-int cnt_neg_temp(int* arr, int n) {
+int cnt_neg_temp(const int* arr, const int n) {
 	int ans = 0;
 	for (int i = 0; i < n; i++) {
 		if (arr[i] < 0) {
